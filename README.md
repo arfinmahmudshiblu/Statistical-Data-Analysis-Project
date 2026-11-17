@@ -132,9 +132,9 @@ C. Grade Distribution
 ```bash
        Grade	  Frequency	        Percentage
         A            172	          89.12%
-        B             19               9.84%
-        C              2    	       1.04%
-       Total	     193	            100%
+        B             19              9.84%
+        C              2    	      1.04%
+       Total	     193	          100%
 ```
 # Interpretation: 
 Grade A is the most frequent category, representing 89.12% of students. Only 1.04% received Grade C. This indicates a highly concentrated grade distribution.
@@ -246,12 +246,60 @@ Hypotheses:
 At the 5% significance level, study hours, sleep hours, and previous GPA have statistically significant positive linear correlations with final exam scores. Attendance does not.
 
 
+# Correlation Matrix Analysis
+Overall, the findings suggest that study hours, previous academic achievement, and sleep duration are positively associated with final examination performance. However, correlation does not establish causation, and further regression analysis is recommended to investigate the combined relationships between these variables and academic performance.
+
+# Feature Skewness Analysis
+![alt text](image-3.png)
 
 
+The skewness analysis indicates that most numerical features in the Student Academic Performance dataset are approximately symmetrically distributed.
+
+Study hours per week (0.0065) and previous GPA (0.0164) exhibit almost perfectly symmetric distributions. Attendance percentage (-0.1542) shows slight negative skewness, while sleep hours per night (0.2750) demonstrates slight positive skewness.
+
+However, final exam scores (-0.6442) exhibit moderate negative skewness, indicating that scores are concentrated toward higher values, with a relatively small number of students obtaining lower scores.
+
+Overall, the dataset does not show substantial skewness in most numerical features. The final exam score deserves additional investigation through a histogram and boxplot to understand its distribution and identify potential outliers.
 
 
+# HYPOTHESIS TESTING
 
+# Welch's Independent Samples T-Test
 
+Null Hypothesis (H₀): There is no statistically significant difference
+                      in the average final examination scores between students with and without internet access.
+
+Alternative Hypothesis (H₁):There is a statistically significant difference 
+                            in the average final examination scores between 
+                            the two groups.
+
+# Interpretation
+
+The calculated t-statistic was 0.454, and the p-value was 0.6512.
+
+Since the p-value (0.6512) is greater than the significance level of 0.05, the null hypothesis was not rejected.
+
+Therefore, there is insufficient statistical evidence of a significant difference in average final examination scores between students with and without internet access.
+
+Although students with internet access achieved a slightly higher average score, the observed difference is not statistically significant.
+
+# Check effect of Final Exam Vs Extracurricular Participation
+Null Hypothesis (H₀): There is no statistically significant difference in the
+                      average final examination scores between students with and without extracurricular_participation.
+
+Alternative Hypothesis (H₁):There is a statistically significant difference 
+                            in the average final examination scores between 
+                            the two groups.
+
+# Interpretation
+
+The calculated t-statistic was -1.186, and the p-value was 0.2376.
+
+Since the p-value (0.2376) is greater than the significance level of 0.05, the null hypothesis was not rejected.
+
+Therefore, there is insufficient statistical evidence of a significant difference in average final examination scores between students with and without extracurricular_participation.
+
+Although students with internet access achieved a slightly higher average score, the observed difference is not statistically significant.
 
 
 
